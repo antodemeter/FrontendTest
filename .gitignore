@@ -1,0 +1,14 @@
+# default
+.DS_Store
+
+# node.js
+.grunt/
+/node_modules
+/output
+/bower_components
+npm-debug.log
+
+# project
+dist
+.tmp
+.sass-cache

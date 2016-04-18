@@ -1,0 +1,37 @@
+{
+    "bitwise": true,
+    "browser": true,
+    "camelcase": false,
+    "curly": true,
+    "eqeqeq": false,
+    "immed": true,
+    "indent": 4,
+    "latedef": true,
+    "laxbreak": true,
+    "newcap": true,
+    "noarg": true,
+    "node": true,
+    "quotmark": "single",
+    "strict": true,
+    "trailing": true,
+    "undef": true,
+    "unused": true,
+    "validthis": true,
+
+    "laxcomma" : true,
+    "loopfunc" : true,
+    "-W032": true,
+
+    "globals": {
+        "$": false,
+        "jQuery": false,
+        "Module": true
+    },
+
+    "predef": [
+        "brightcove",
+        "define",
+        "require",
+        "requirejs"
+    ]
+}

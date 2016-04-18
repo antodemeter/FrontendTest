@@ -1,0 +1,51 @@
+{
+  "private": true,
+  "devDependencies": {
+    "babel-preset-es2015": "^6.1.18",
+    "grunt": "^0.4.5",
+    "grunt-babel": "^6.0.0",
+    "grunt-browser-sync": "^2.1.2",
+    "grunt-concurrent": "^1.0.0",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-cssmin": "^0.12.2",
+    "grunt-contrib-imagemin": "^1.0.0",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-less": "^1.3.0",
+    "grunt-contrib-requirejs": "^0.4.4",
+    "grunt-contrib-uglify": "^0.8.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-ejs": "^0.3.0",
+    "grunt-filerev": "^2.2.0",
+    "load-grunt-configs": "~0.1.0",
+    "load-grunt-tasks": "^3.4.1",
+    "rjs-build-analysis": "0.0.3",
+    "time-grunt": "^1.1.0"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "jshint:recommended"
+    ],
+    "env": {
+      "node": true,
+      "browser": true,
+      "es6": true,
+      "jquery": true
+    },
+    "rules": {
+      "quotes": [
+        2,
+        "single"
+      ],
+      "indent": [
+        2,
+        2
+      ]
+    }
+  },
+  "dependencies": {
+    "grunt-contrib-less": "^1.3.0"
+  }
+}
