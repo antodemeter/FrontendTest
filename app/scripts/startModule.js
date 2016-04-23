@@ -1,16 +1,10 @@
 'use strict';
 
-define('startModule', ['jquery','easyAutocomplete'], function($) {
+define('startModule', ['jquery','easyAutocomplete','ajax'], function($, EasyAutocomplete, Ajax) {
 
   var $suggestion = $('#suggestion'),
       root        = 'https://www.prontopro.it',
       maxElements = 100;
-
-  var ajaxCall = function( url ) {
-    $.getJSON( url , function( data ) {
-        console.log(data);
-    });
-  };
 
   var options = {
 
@@ -25,9 +19,9 @@ define('startModule', ['jquery','easyAutocomplete'], function($) {
           enabled: true
         },
         maxNumberOfElements: maxElements,
-        onSelectItemEvent: function() {
+        onClickEvent: function() {
             var url = $suggestion.getSelectedItemData().url;
-            ajaxCall( root + url );
+            Ajax.parseAndPrintSuggestion( root + url );
         }
     }
   };

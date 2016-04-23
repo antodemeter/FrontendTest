@@ -1,0 +1,9 @@
+<form class="ui form">
+{{#list}}
+  <div class="field">
+    <label>{{ label }}</label>
+    <input type="{{ type }}" name="{{ label }}" placeholder="{{ label }}" value="{{ name }}" />
+  </div>
+{{/list}}
+  <button class="ui button" type="submit">Submit</button>
+</form>

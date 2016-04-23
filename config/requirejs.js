@@ -3,14 +3,6 @@ module.exports.tasks = {
     options: {
       baseUrl: '<%= config.dir.app %>/scripts/',
       mainConfigFile: '<%= config.dir.app %>/scripts/config.js',
-      modules: [
-        {
-          name: 'main',
-          include: [
-            'main'
-          ]
-        }
-      ],
       removeCombined: false,
       findNestedDependencies: true
     },

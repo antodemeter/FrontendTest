@@ -8,12 +8,12 @@ module.exports = function (grunt) {
   var options = {
     config: {
       dir: {
-        app:         'app',
-        dist:        'dist',
-        tmp:         '.tmp'
+        app: 'app',
+        dist: 'dist',
+        tmp: '.tmp'
       },
       ports: {
-        livereload:  9000
+        livereload: 9000
       }
     }
   };
@@ -22,7 +22,7 @@ module.exports = function (grunt) {
   grunt.initConfig(configs);
 
   // livereload
-  grunt.registerTask('serve', 'Starting server and preview project', function (target) {
+  grunt.registerTask('serve', 'Start the server and preview website', function (target) {
 
     if (target === 'dist') {
       return grunt.task.run(['build', 'browserSync:dist']);
@@ -30,7 +30,7 @@ module.exports = function (grunt) {
 
     grunt.task.run([
       'clean:server',
-      'concurrent:server',
+      'concurrent:develop',
       'requirejs:develop',
       'browserSync:livereload',
       'watch'
@@ -39,10 +39,8 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
-    'ejs:production',
-    'concurrent:dist',
+    'concurrent:production',
     'requirejs:production',
-    'cssmin',
-    'filerev'
+    'cssmin'
   ]);
 };

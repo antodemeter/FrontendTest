@@ -1,12 +1,12 @@
 module.exports.tasks = {
   concurrent: {
-    server: [
+    develop: [
       'jshint',
       'babel:develop',
       'less:develop',
       'ejs:develop'
     ],
-    dist: [
+    production: [
       'jshint',
       'babel:production',
       'less:production',

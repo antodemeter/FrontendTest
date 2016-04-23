@@ -1,18 +1,18 @@
 module.exports.tasks = {
   ejs: {
     develop: {
-        src: ['**/*.ejs', '!partials/**/*'],
+    	  cwd: '<%= config.dir.app %>',
+        src: ['**/*.ejs', '!partials/**/*', '!layouts/**/*'],
         dest: '<%= config.dir.tmp %>',
         expand: true,
-        ext: '.html',
-        cwd: '<%= config.dir.app %>'
+        ext: '.html'
     },
     production: {
-        src: ['**/*.ejs', '!partials/**/*', '!layouts/**/*'],
+    	  cwd: '<%= config.dir.app %>',
+        src: ['**/index.ejs'],
         dest: '<%= config.dir.dist %>',
         expand: true,
-        ext: '.html',
-        cwd: '<%= config.dir.app %>'
+        ext: '.html'
     }
   }
 };

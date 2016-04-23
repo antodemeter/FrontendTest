@@ -4,11 +4,7 @@ module.exports.tasks = {
       files: [
         {
           dot: true,
-          src: [
-            '<%= config.dir.tmp %>',
-            '<%= config.dir.dist %>/*',
-            '!<%= config.dist %>/.git*'
-          ]
+          src: '<%= config.dir.dist %>/*'
         }
       ]
     },
